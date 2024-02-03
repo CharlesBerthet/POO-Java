@@ -59,3 +59,49 @@ final int VARIABLEFIXE = 50;
 
 
 # Choisir le bon type de variable
+
+## Spécifier le type de variable
+
+![Alt text](image-1.png)
+
+> Pour déclarer une variable, il faut commencer par le `type`, puis le `nom` et enfin la `valeur`. **Si l'on ne met pas de valeur, il faut quand même définir le type**.
+
+> Cependant, lorsque l'on déclare une variable en **spécifiant uniquement son type**, `celle-ci ne peut pas être utilisée tant qu'on ne lui a pas attribué une valeur`.
+
+Il est possible de combiner les types afin d'en construire des plus complexes.
+
+## Découvrir les types numériques
+
+> Le `int` est l'un des types primitifs les plus utilisés. Il existe également le `long`, une version qui permet de stocker des nombres encore plus grands.
+
+> Chaque type a ses avantages et ses inconvénients : un **type précis prendra plus de place en mémoire**, mais un **type moins précis** (plus léger) pourrait ne **pas suffire à stocker l'information** voulue.
+
+> Pour une **précision jusqu'à 2 décimales** après la virgule, on peut utiliser `float`. Au dela, ce sera `double`.
+
+## Découvrir les booléens
+
+> Une valeur booléene **prend le plus petit emplacement de la mémoire** (un seul bit). Les booléens sont `principalement utilisés pour les conditions`.
+
+```Java
+boolean variableBooleen = true;
+
+boolean variableBool2 = false;
+```
+
+## Utiliser le type String pour les chaines de caractères
+
+> Les `String` permettent de stocker du **texte**, ou en d'autres termes, **un ensemble de caractères**.
+
+```Java
+String firstFavoriteCity = "New York";
+String secondFavoriteCity = "Buenos Aires";
+String favorites = firstFavoriteCity + secondFavoriteCity; 
+// -> "New YorkBuenos Aires"
+```
+
+```Java
+String firstFavoriteCity = "New York"
+String secondFavoriteCity = "Buenos Aires"
+String favorites = "My favorite cities are " +firstFavoriteCity+ " and "+secondFavoriteCity; 
+// -> "My favorite cities are New York and Buenos Aires"
+```
