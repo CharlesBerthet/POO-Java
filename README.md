@@ -1,1 +1,0 @@
-![Fiche Récap](image.png)
