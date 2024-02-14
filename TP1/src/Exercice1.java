@@ -1,6 +1,11 @@
-// Partie 1
+//Partie 1
 
 // public class Exercice1 {
+    
+//     /** 
+//      * @param args
+//      * @throws Exception
+//      */
 //     public static void main(String[] args) throws Exception {
 //         int nb1 = 100;
 //         int nb2 = 200;
@@ -8,12 +13,17 @@
 //         somme = nb1 + nb2;
 //         System.out.println(String.format("Resultat de l'addition : %d", somme));
 //     }
-// }
+}
 
 
 // Partie 2
 
 public class Exercice1 {
+    
+    /** 
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         System.out.println(String.format("Resultat de l'addition : %d", addition(100,200)));
     }

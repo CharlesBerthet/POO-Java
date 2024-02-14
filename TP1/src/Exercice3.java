@@ -3,6 +3,11 @@
 import java.util.Random;
 
 public class Exercice3 {
+    
+    /** 
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         Random random = new Random();
         int nb1, nb2, nb3;

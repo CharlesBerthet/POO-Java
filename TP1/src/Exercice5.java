@@ -6,6 +6,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Exercice5 {
+    
+    /** 
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         Random random = new Random();
         int nombre = random.nextInt(100);

@@ -4,6 +4,11 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Exercice4 {
+    
+    /** 
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         Random random = new Random();
         int nombre = random.nextInt(100);
