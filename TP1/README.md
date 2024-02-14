@@ -1,18 +1,23 @@
-## Getting Started
+# TP 1 - POO Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Ce TP contient plusieurs exercices visant à découvrir/renforcer les compétences en manipulation de tablaux, chaînes de caractères et nombres aléatoires en Java.
 
-## Folder Structure
+## Exercice 1 : Création d'un nouveau projet Java
 
-The workspace contains two folders by default, where:
+Cet exercice permet la création d'un nouveau projet Java, sa compilation et l'exécution de son code, ainsi que l'utilisation de VS Code pour le débogage.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Exercice 2 : Manipulation de tableaux et de chaînes de caractères
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Dans cet exercice, on doit créer un tableau de 10 emails (chaines de caractères). En utilisant la classe `Arrays`, on pourra calculer les parts de marchés de chacun des fournisseurs d'accès Internet en analysant les noms à partir des adresses.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Exercice 3 : Pair/Pair/Impair
 
-## Dependency Management
+Ce programme génère trois nombres aléatoires entre 0 et 1000. Ensuite, il vérifie si deux nombres pairs sont suivis par un nombre impair. Si ce n'est pas le cas, il recommence jusqu'à obtenir cette combinaison. Enfin, il affiche le nombre d'essais nécessaires pour obtenir cette combinaison.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Exercice 4 : Devinette d'un nombre
+
+Dans cet exercice, un nombre aléatoire est généré entre 0 et 1000. L'utilisateur est invité à deviner ce nombre en saisissant des valeurs comprises entre 0 et 1000. A chaque tentative, le programme indique si le nombre à deviner est plus grand ou plus petit que celui saisi par l'utilisateur. Le jeu se poursuit jusqu'à ce que l'utilisateur trouve le bon nombre, puis affiche le nombre d'essais nécessaires.
+
+## Exercice 5 : Devinette d'un nombre améliorée
+
+Cet exercice est une extension de l'exercice 4. En plus de demander à l'utilisateur de deviner le nombre, le programme affiche également le temps mis par l'utilisateur pour trouver la bonne réponse. De plus, si l'utilisateur ne trouve pas le nombre dans un délai défini (par exemple, 30 secondes), le jeu s'arrête et l'utilisateur a perdu.
