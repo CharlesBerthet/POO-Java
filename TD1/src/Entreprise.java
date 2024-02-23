@@ -84,6 +84,79 @@ public class Entreprise {
     }
 
 
+    public static String definirTaille (int nbEmployes) {
+        String taille = Entreprise.getTAILLE_INCONNU();
+        if (nbEmployes >= 0)
+        {
+            if (nbEmployes < 10) {
+                taille = Entreprise.getTAILLE_TRES_PETITE();
+            }
+            else {
+                if (nbEmployes < 50) {
+                    taille = Entreprise.getTAILLE_PETITE();
+                }
+                else {
+                    if (nbEmployes < 250) {
+                        taille = Entreprise.getTAILLE_MOYENNE();
+                    }
+                    else {
+                        taille = Entreprise.getTAILLE_GRANDE();
+                    }
+                }
+            }
+        }
+        return taille;
+    }
+
+
+    public int nbEmployeMin() {
+        int nb=-1;
+        if (this.taille.equals(Entreprise.getTAILLE_TRES_PETITE())) {
+            nb = 1;
+        }
+        else {
+            if (this.taille.equals(Entreprise.getTAILLE_PETITE())) {
+                nb = 10;
+            }
+            else {
+                if (this.taille.equals(Entreprise.getTAILLE_MOYENNE())) {
+                    nb = 50;
+                }
+                else {
+                    if (this.taille.equals(Entreprise.getTAILLE_GRANDE())) {
+                        nb = 250;
+                    }
+                }
+            }
+        }
+        return nb;
+    }
+
+
+    public static int nbEmployeMinParTaille (String taille) {
+        int nb=-1;
+        if (taille.equals(Entreprise.getTAILLE_TRES_PETITE())) {
+            nb = 1;
+        }
+        else {
+            if (taille.equals(Entreprise.getTAILLE_PETITE())) {
+                nb = 10;
+            }
+            else {
+                if (taille.equals(Entreprise.getTAILLE_MOYENNE())) {
+                    nb = 50;
+                }
+                else {
+                    if (taille.equals(Entreprise.getTAILLE_GRANDE())) {
+                        nb = 250;
+                    }
+                }
+            }
+        }
+        return nb;
+    }
+
+
     public Entreprise(){
     }
 
