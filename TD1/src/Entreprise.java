@@ -3,6 +3,56 @@ public class Entreprise {
     private String taille;
     private int secteur;
 
+    private static final String TAILLE_TRES_PETIT = "TPE";
+    private static final String TAILLE_PETITE = "PE";
+    private static final String TAILLE_MOYENNE = "ME";
+    private static final String TAILLE_GRANDE = "GE";
+    private static final String TAILLE_INCONNU = "";
+
+    private static final int SECTEUR_PRIMAIRE = 1;
+    private static final int SECTEUR_SECONDAIRE = 2;
+    private static final int SECTEUR_TERTIAIRE = 3;
+    private static final int SECTEUR_INCONNU = 0;
+
+
+    public static String getTAILLE_TRES_PETITE() {
+        return Entreprise.TAILLE_TRES_PETIT;
+    }
+
+    public static String getTAILLE_PETITE() {
+        return Entreprise.TAILLE_PETITE;
+    }
+
+    public static String getTAILLE_MOYENNE() {
+        return Entreprise.TAILLE_MOYENNE;
+    }
+
+    public static String getTAILLE_GRANDE() {
+        return Entreprise.TAILLE_GRANDE;
+    }
+
+    public static String getTAILLE_INCONNU() {
+        return Entreprise.TAILLE_INCONNU;
+    }
+
+
+    public static int getSECTEUR_PRIMAIRE() {
+        return Entreprise.SECTEUR_PRIMAIRE;
+    }
+
+    public static int getSECTEUR_SECONDAIRE() {
+        return Entreprise.SECTEUR_SECONDAIRE;
+    }
+
+    public static int getSECTEUR_TERTIAIRE() {
+        return Entreprise.SECTEUR_TERTIAIRE;
+    }
+
+    public static int getSECTEUR_INCONNU() {
+        return Entreprise.SECTEUR_INCONNU;
+    }
+
+
     public String getNom() {
         return this.nom;
     }
@@ -14,10 +64,10 @@ public class Entreprise {
         return this.taille;
     }
     public void setTaille(String taille) {
-        this.taille = "";
-        if (taille != null){
+        this.taille = Entreprise.getTAILLE_INCONNU();
+        if (taille != null) {
             taille = taille.toUpperCase();
-            if (taille.equals("TPE") || taille.equals("PME") || taille.equals("ETI") || taille.equals("GE")){
+            if (taille.equals(Entreprise.getTAILLE_TRES_PETITE()) || taille.equals(Entreprise.getTAILLE_PETITE()) || taille.equals(Entreprise.getTAILLE_MOYENNE()) || taille.equals(Entreprise.getTAILLE_GRANDE())){
                 this.taille = taille;
             }
         }
@@ -27,8 +77,8 @@ public class Entreprise {
         return this.secteur;
     }
     public void setSecteur(int secteur) {
-        this.secteur = 0;
-        if (secteur >= 1 && secteur <= 3){
+        this.secteur = Entreprise.getSECTEUR_INCONNU();
+        if (secteur == Entreprise.getSECTEUR_PRIMAIRE() || secteur == Entreprise.getSECTEUR_SECONDAIRE() || secteur == Entreprise.getSECTEUR_TERTIAIRE()){
             this.secteur = secteur;
         }
     }
