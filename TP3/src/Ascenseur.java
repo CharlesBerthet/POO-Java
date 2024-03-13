@@ -2,6 +2,7 @@ public class Ascenseur {
     private int etageMin;
     private int etageMax;
     private int etageCourant;
+    private int etage;
     
     public static String avertisseur = "beep";
 
@@ -26,6 +27,16 @@ public class Ascenseur {
         this.etageCourant = etageCourant;
     }
 
+    public int getEtage() {
+        return this.etage;
+    }
+    public void setEtage(int etage) {
+        this.etage = etage;
+    }
+
+
+    public Ascenseur() {
+    }
 
     public Ascenseur(int etageMin, int etageMax, int etageCourant) {
         this.etageMin = etageMin;
@@ -33,12 +44,42 @@ public class Ascenseur {
         this.etageCourant = etageCourant;
     }
 
+
     @Override
     public String toString() {
         return 
         "Etage min = " + this.getEtageMin() + " / " +
         "Etage max = " + this.getEtageMax() + " / " +
         "Etage courant = " + this.getEtageCourant();
+    }
+
+    public void avertit() {
+        System.out.println(avertisseur);
+    }
+
+    public boolean etageValide(int etage) {
+        if (etage >= etageMin && etage <= etageMax) {
+            return true;
+        }
+        return false;
+    }
+
+    public void va(int etage) {
+        if (etageValide(etage)) {
+            while (etageCourant != etage) {
+                System.out.println(etageCourant);
+                if (etageCourant < etage) {
+                    etageCourant++;
+                }
+                else{
+                    etageCourant--;
+                }
+            }
+            System.out.println(etageCourant);
+            avertit();
+        }else {
+            System.out.println("Etage invalide");
+        }
     }
 }
 
