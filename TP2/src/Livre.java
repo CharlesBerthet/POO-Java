@@ -69,4 +69,21 @@ public class Livre extends Article {
         return
         super.toString() + " / Nb pages : " + numPage + " / Auteur : " + prenomAuteur + " " + nomAuteur;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Livre l;
+        if (obj == null || obj.getClass() != this.getClass()){
+            return false;
+        }
+        else {
+            l = (Livre) obj;
+            if (l.getNomAuteur().equals(this.getNomAuteur())) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
 }

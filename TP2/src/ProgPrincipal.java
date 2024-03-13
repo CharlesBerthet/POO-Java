@@ -26,5 +26,8 @@ public class ProgPrincipal {
 
         System.out.println("Nombre total d'articles en vente :" + Article.getNumero());
 
+        Livre livre2 = new Livre("TINTIN03", "Tintin au pays des soviets", 8.5, 78954612, 86, "Georges", "jack", LocalDate.of(1987, 06, 18));
+
+        livre1.equals(livre2);
     }
 }
