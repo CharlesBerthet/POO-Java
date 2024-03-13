@@ -32,6 +32,14 @@ public class Ascenseur {
         this.etageMax = etageMax;
         this.etageCourant = etageCourant;
     }
+
+    @Override
+    public String toString() {
+        return 
+        "Etage min = " + this.getEtageMin() + " / " +
+        "Etage max = " + this.getEtageMax() + " / " +
+        "Etage courant = " + this.getEtageCourant();
+    }
 }
 
 
