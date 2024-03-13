@@ -9,7 +9,7 @@ public class AppAscenseur {
         
         Ascenseur monAscenseur = new Ascenseur(-2, 10, 7);
         Ascenseur PetitAscenseur = new Ascenseur(0, 20, 5);
-        Ascenseur grandAscenseur = new Ascenseur(-2, 11, 0);
+        Ascenseur grandAscenseur = new Ascenseur(-100, 200, 0);
         
         System.out.println("Etage min : " + monAscenseur.getEtageMin());
         System.out.println("Etage max : " + monAscenseur.getEtageMax());

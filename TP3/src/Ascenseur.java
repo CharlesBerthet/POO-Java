@@ -10,14 +10,20 @@ public class Ascenseur {
         return this.etageMin;
     }
     public void setEtageMin(int etageMin) {
-        this.etageMin = etageMin;
+        if (etageMin < -10)
+            this.etageMin = -10;
+        else
+            this.etageMin = etageMin;
     }
 
     public int getEtageMax() {
         return this.etageMax;
     }
     public void setEtageMax(int etageMax) {
-        this.etageMax = etageMax;
+        if (etageMax > 50)
+            this.etageMax = 50;
+        else
+            this.etageMax = etageMax;
     }
 
     public int getEtageCourant() {
@@ -39,9 +45,9 @@ public class Ascenseur {
     }
 
     public Ascenseur(int etageMin, int etageMax, int etageCourant) {
-        this.etageMin = etageMin;
-        this.etageMax = etageMax;
-        this.etageCourant = etageCourant;
+        this.setEtageMin(etageMin);
+        this.setEtageMax(etageMax);
+        this.setEtageCourtant(etageCourant);
     }
 
 
