@@ -1,11 +1,11 @@
 import java.time.Duration;
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Dvd extends Article{
     private Duration duree;
     private String prenomRealisateur;
     private String nomRealisateur;
-    private Date naissance;
+    private LocalDate naissance;
 
     public Duration getDuree(){
         return this.duree;
@@ -28,10 +28,10 @@ public class Dvd extends Article{
         this.nomRealisateur = nomRealisateur;
     }
 
-    public Date getNaissance(){
+    public LocalDate getNaissance(){
         return this.naissance;
     }
-    public void setNaissance(Date naissance){
+    public void setNaissance(LocalDate naissance){
         this.naissance = naissance;
     }
 
@@ -39,7 +39,7 @@ public class Dvd extends Article{
     public Dvd(){
     }
 
-    public Dvd(String reference, String designation, double prix, Duration duree, String prenomRealisateur, String nomRealisateur, Date naissance){
+    public Dvd(String reference, String designation, double prix, Duration duree, String prenomRealisateur, String nomRealisateur, LocalDate naissance){
         super(reference, designation, prix);
         this.setDuree(duree);
         this.setPrenomRealisateur(prenomRealisateur);

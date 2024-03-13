@@ -1,4 +1,5 @@
 import java.time.Duration;
+import java.time.LocalDate;
 
 public class ProgPrincipal {
     public static void main(String[] args) throws Exception
@@ -13,12 +14,12 @@ public class ProgPrincipal {
         article2.affichage();
         System.out.println(article2.toString());
     
-        Livre livre1 = new Livre("TINTIN03", "Tintin au pays des soviets", 8.5, 78954612, 86, "Georges", "Hergé");
+        Livre livre1 = new Livre("TINTIN03", "Tintin au pays des soviets", 8.5, 78954612, 86, "Georges", "Hergé", LocalDate.of(1987, 06, 18));
 
         livre1.affichageLivre();
         System.out.println(livre1.toString());
 
-        Dvd dvd1 = new Dvd("DVD01", "La soupe aux choux", 19.5, Duration.ofMinutes(98), "Jean", "Girault");
+        Dvd dvd1 = new Dvd("DVD01", "La soupe aux choux", 19.5, Duration.ofMinutes(98), "Jean", "Girault", LocalDate.of(1974, 11, 15));
 
         dvd1.affichageDvd();
         System.out.println(dvd1.toString());

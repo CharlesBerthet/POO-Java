@@ -1,11 +1,11 @@
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Livre extends Article {
     private int numISBN;
     private int numPage;
     private String prenomAuteur;
     private String nomAuteur;
-    private Date naissance;
+    private LocalDate naissance;
 
     public int getNumISBN(){
         return this.numISBN;
@@ -35,10 +35,10 @@ public class Livre extends Article {
         this.nomAuteur = nomAuteur;
     }
 
-    public Date getNaissance(){
+    public LocalDate getNaissance(){
         return this.naissance;
     }
-    public void setNaissance(Date naissance){
+    public void setNaissance(LocalDate naissance){
         this.naissance = naissance;
     }
 
@@ -46,7 +46,7 @@ public class Livre extends Article {
     public Livre(){
     }
 
-    public Livre(String reference, String designation, double prix, int numISBN, int numPage, String prenomAuteur, String nomAuteur, Date naissance){
+    public Livre(String reference, String designation, double prix, int numISBN, int numPage, String prenomAuteur, String nomAuteur, LocalDate naissance){
         super(reference, designation, prix);
         this.setNumISBN(numISBN);
         this.setNumPage(numPage);
