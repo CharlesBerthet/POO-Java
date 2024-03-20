@@ -56,9 +56,7 @@ public class Elephant extends Animal implements IHerbivore{
         super.toString() +
         "\nType : " + TYPE +
         "\nOrigine : " + this.origine +
-        "\nInfo sup : " + this.info() +
-        "\nJe mange cette quantité : " + this.qttePlanteJour() +
-        "\nJe mange ça :" + this.plantePreferee();
+        "\nInfo sup : " + this.info();
     }
 
     @Override
@@ -82,5 +80,10 @@ public class Elephant extends Animal implements IHerbivore{
                 return "Elephant d'origine inconnue";
             }
         }
+    }
+
+    @Override
+    public String getNom(){
+        return super.getNom();
     }
 }

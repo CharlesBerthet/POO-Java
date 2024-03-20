@@ -1,4 +1,4 @@
-public class Girafe extends Animal{
+public class Girafe extends Animal implements IHerbivore{
 
         public static final int AGE_ADULTE = 4;
         public static final String TYPE = "Girafe";
@@ -37,4 +37,26 @@ public class Girafe extends Animal{
             super.toString() +
             "\nType : " + TYPE;
         }
-    }    
+
+        @Override
+    public double qttePlanteJour() {
+        double quantite;
+        quantite = this.getPoids() / 20;
+
+        return quantite;
+    }
+
+    @Override
+    public String plantePreferee() {
+        if (getAge() <= 5) {
+            return "lait maternel";
+        } else {
+            return "acacias";
+        }
+    }
+
+    @Override
+    public String getNom(){
+        return super.getNom();
+    }
+}    
