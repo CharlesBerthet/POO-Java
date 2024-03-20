@@ -80,6 +80,13 @@ public abstract class Animal {
 
     }
 
+    Animal(String nom, int anneeNaissance, double poids, double taille) {
+        this.setNom(nom);
+        this.setAnneeNaissance(anneeNaissance);
+        this.setPoids(poids);
+        this.setTaille(taille);
+    }
+
     Animal(String nom, int anneeNaissance, double poids, double taille, SexeAnimal sexeAnimal) {
         this.setNom(nom);
         this.setAnneeNaissance(anneeNaissance);
