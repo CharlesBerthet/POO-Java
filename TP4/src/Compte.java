@@ -4,7 +4,7 @@ public class Compte
     private static final String monnaie="euros";
     private static int numAuto=0;
     private int numCpt;
-    private double solde;
+    protected double solde;
     
 
 	//ACCESSEURS

@@ -4,10 +4,33 @@ import java.util.Scanner;
 public class App {
     public static void main (String args[]) {
         int rep;
+		int menu =-1;
+
+		int annee;
+		int argent;
         Scanner sc=new Scanner(System.in);
 
-		Compte compte = new Compte(200);
-		int argent;
+		Compte compte = null;
+
+		while (menu == -1) {
+			System.out.println("1. Compte");
+			System.out.println("2. Compte bloqué");
+			System.out.println("3. Compte epargne");
+			menu = sc.nextInt();
+
+			switch (menu) {
+				case 1:
+					compte = new Compte(1000);
+					break;
+				case 2:
+					compte = new CompteBloque(1000, -150);
+					break;
+				case 3:
+					compte = new CompteEpargne(1000, -150, 5000, 0.03);
+				default:
+					break;
+			}
+		}
 
 		do
 		{
@@ -35,6 +58,11 @@ public class App {
 					System.out.println("Entrez le montant");
 					argent = sc.nextInt();
 					compte.debiter(argent);
+					break;
+				case 5 :
+					annee = sc.nextInt();
+					compte.calculFuturMontant(annee);
+					compte.calculInteret(annee);
 					break;
 				default : System.out.println("erreur");
 			}
