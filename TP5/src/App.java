@@ -5,6 +5,7 @@ public class App {
 
         ArrayList<IHerbivore> ListeHerbivore = new ArrayList<IHerbivore>();
         ArrayList<ICarnivore> ListeCarnivore = new ArrayList<ICarnivore>();
+        ArrayList<IOmnivore> ListeOmnivore = new ArrayList<IOmnivore>();
 
         Elephant elephant1 = new Elephant("DJUMBO", 1995, 1500, 2.50, SexeAnimal.MASCULIN, Continent.ASIE);
         ListeHerbivore.add(elephant1);
@@ -16,10 +17,15 @@ public class App {
         Girafe girafe2 = new Girafe("Daniel", 2022, 341, 1.75, SexeAnimal.MASCULIN);
         ListeHerbivore.add(girafe2);
 
-        Serpent serpent1 = new Serpent("Sonny", 2022, 1.1, 2, EspeceSerpent.A_SONNETTE);
+        Serpent serpent1 = new Serpent("Sonny", 2022, 1.1, 2, SexeAnimal.FEMININ, EspeceSerpent.A_SONNETTE);
         ListeCarnivore.add(serpent1);
-        Serpent serpent2 = new Serpent("Roger", 2023, 2.5, 3.5, EspeceSerpent.BOA);
+        Serpent serpent2 = new Serpent("Roger", 2023, 2.5, 3.5, SexeAnimal.MASCULIN, EspeceSerpent.BOA);
         ListeCarnivore.add(serpent2);
+
+        Ours ours1 = new Ours("Teddy", 2018, 767, 1.5, SexeAnimal.FEMININ, EspeceOurs.POLAIRE);
+        ListeOmnivore.add(ours1);
+        Ours ours2 = new Ours("Elmer", 2020, 655, 1.75, SexeAnimal.MASCULIN, EspeceOurs.BRUN);
+        ListeOmnivore.add(ours2);
     
         for (IHerbivore h : ListeHerbivore) {
             System.out.println(h);
@@ -29,6 +35,11 @@ public class App {
         for (ICarnivore c : ListeCarnivore) {
             System.out.println(c);
             System.out.println(c.getNom() + " mange " + c.proiePreferees() + " en quantité " + c.qtteViandeSemaine() + "kg par semaine." + " " + c.tue());
+        }
+
+        for (IOmnivore o : ListeOmnivore) {
+            System.out.println(o);
+            System.out.println(o.getNom() + " mange " + o.proiePreferees() + " en quantité " + o.qtteViandeSemaine() + " kg par jour." + " " + o.tue() + " Son régime contient aussi " + o.plantePreferee() + " en quantité " + o.qttePlanteJour() + " kg par jour");
         }
 
     }
