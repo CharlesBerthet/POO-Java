@@ -31,8 +31,8 @@ public class Serpent extends Animal implements ICarnivore{
 
     }
 
-    Serpent(String nom, int anneeNaissance, double poids, double taille, EspeceSerpent espece) {
-        super(nom, anneeNaissance, poids, taille);
+    Serpent(String nom, int anneeNaissance, double poids, double taille, SexeAnimal sexeAnimal, EspeceSerpent espece) {
+        super(nom, anneeNaissance, poids, taille, sexeAnimal);
         this.setEspece(espece);
     }
 
