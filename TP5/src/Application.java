@@ -52,13 +52,29 @@ public class Application {
                     break;
                 
                 case 1:
+                    System.out.println("-----------");
+                    System.out.println("LES HABITANTS DU ZOO");
+                    System.out.println("-----------");
                     System.out.println(zoo.afficherAnimaux(ListeAnimaux));
                     break;
+
                 case 2:
+                    System.out.println("-----------");
+                    System.out.println("CRIS");
+                    System.out.println("-----------");
                     System.out.println(zoo.faitCrierSesAnimaux(ListeAnimaux));
                     break;
+
                 case 3:
-                    System.err.println(zoo.rechercherAnimal(ListeAnimaux));
+                    System.out.println("-----------");
+                    System.out.println("REPAS");
+                    System.out.println("-----------");
+                    System.out.println("Quels animal ?");
+                    String animal = sc.next();
+                    System.out.println(zoo.rechercherAnimal(ListeAnimaux, animal));
+
+                case 4:
+
             }
         } while (menu != 0);
     }

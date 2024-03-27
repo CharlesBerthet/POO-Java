@@ -1,16 +1,9 @@
 import java.util.ArrayList;
-import java.util.Scanner; 
 
 public class Zoo {
 
-    Scanner sc = new Scanner(System.in);
-
     public String afficherAnimaux(ArrayList<Animal> animaux) {
         StringBuilder resultat = new StringBuilder();
-
-        System.out.println("-----------");
-        System.out.println("LES HABITANTS DU ZOO");
-        System.out.println("-----------");
 
         for (Animal a : animaux) {
             if (a instanceof IHerbivore) {      
@@ -49,10 +42,6 @@ public class Zoo {
     public String faitCrierSesAnimaux(ArrayList<Animal> animaux){
         StringBuilder resultat = new StringBuilder();
 
-        System.out.println("-----------");
-        System.out.println("CRIS");
-        System.out.println("-----------");
-
         for (Animal a : animaux) {
             resultat.append(a.cri())
                 .append("\n");
@@ -60,31 +49,42 @@ public class Zoo {
         return resultat.toString();
     }
 
-    public String rechercherAnimal(ArrayList<Animal> animaux){
+    public String rechercherAnimal(ArrayList<Animal> animaux, String nom){
         StringBuilder resultat = new StringBuilder();
-
-        System.out.println("-----------");
-        System.out.println("REPAS");
-        System.out.println("-----------");
-        System.out.println("Quels animal ?");
-        String recherche = sc.next();
-
-        resultat.append("Le repas de ");
         
+        boolean trouve = false;
+
         for (Animal a : animaux) {
-            if (a.getNom().equalsIgnoreCase(recherche) && a instanceof ICarnivore) {
-                resultat.append(a.getNom())
+            if (a.getNom().equalsIgnoreCase(nom) && a instanceof ICarnivore) {
+                resultat.append("Le repas de ")
+                    .append(a.getNom())
                     .append(" est ")
                     .append(((ICarnivore) a).proiePreferees());
+                    trouve = true;
             }
-            else if (a.getNom().equalsIgnoreCase(recherche) && a instanceof IHerbivore) {
-                resultat.append(a.getNom())
+            else if (a.getNom().equalsIgnoreCase(nom) && a instanceof IHerbivore) {
+                resultat.append("Le repas de ")
+                    .append(a.getNom())
                     .append(" est ")
                     .append(((IHerbivore) a).plantePreferee());
+                    trouve = true;
             }
+            else if (a.getNom().equalsIgnoreCase(nom) && a instanceof IOmnivore) {
+                resultat.append("Le repas de ")
+                    .append(a.getNom())
+                    .append(" est ")
+                    .append(((IOmnivore) a).plantePreferee())
+                    .append(" et ")
+                    .append(((IOmnivore) a).proiePreferees());
+                    trouve = true;
+            }
+        }
+        if (!trouve) {
+            resultat.append("Cet animal n'existe pas");
         }   
 
-        
         return resultat.toString();
     }
+
+
 }
