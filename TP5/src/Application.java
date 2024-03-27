@@ -90,6 +90,14 @@ public class Application {
                     animal = sc.next();
                     System.out.println(zoo.supprimerAnimal(ListeAnimaux, animal));
                     break;
+
+                case 6:
+                    System.out.println("-----------");
+                    System.out.println("DU PLUS JEUNE AU PLUS VIEUX");
+                    System.out.println("-----------");
+                    zoo.trierAnimauxParDateNaissance(ListeAnimaux);
+                    System.out.println(zoo.afficherAnimaux(ListeAnimaux));
+                    break;
             }
         } while (menu != 0);
     }

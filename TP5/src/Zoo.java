@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Zoo {
 
@@ -121,5 +122,11 @@ public class Zoo {
         }
 
         return resultat.toString();
+    }
+
+    public void trierAnimauxParDateNaissance(ArrayList<Animal> animaux){
+        Collections.sort(animaux, (a1, a2) -> Integer.valueOf(a2.getAnneeNaissance()).compareTo(a1.getAnneeNaissance()));
+
+        System.out.println(afficherAnimaux(animaux));
     }
 }
