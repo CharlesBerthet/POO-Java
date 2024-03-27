@@ -88,4 +88,9 @@ public class Ours extends Animal implements IOmnivore {
     public double qttePlanteJour(){
         return quantiteNourriture / 2;
     }
+
+    @Override
+    public String mangerAvec(){
+        return "";
+    }
 }  

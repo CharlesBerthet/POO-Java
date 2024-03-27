@@ -124,9 +124,51 @@ public class Zoo {
         return resultat.toString();
     }
 
-    public void trierAnimauxParDateNaissance(ArrayList<Animal> animaux){
-        Collections.sort(animaux, (a1, a2) -> Integer.valueOf(a2.getAnneeNaissance()).compareTo(a1.getAnneeNaissance()));
+    public void trierAnimauxParDateNaissance(ArrayList<Animal> animaux, String info){
 
-        System.out.println(afficherAnimaux(animaux));
+        if (info.equalsIgnoreCase("C")) {
+            Collections.sort(animaux, (a1, a2) -> Integer.valueOf(a2.getAnneeNaissance()).compareTo(a1.getAnneeNaissance()));
+            System.out.println(afficherAnimaux(animaux));
+        }
+        else if (info.equalsIgnoreCase("D")) {
+            Collections.sort(animaux, (a1, a2) -> Integer.valueOf(a1.getAnneeNaissance()).compareTo(a2.getAnneeNaissance()));
+            System.out.println(afficherAnimaux(animaux));
+        }
+        else {
+            System.out.println("Erreur");
+        }
+        
+
+        
+    }
+
+    public void trierAnimauxParTaille(ArrayList<Animal> animaux, String info){
+
+        if (info.equalsIgnoreCase("C")) {
+            Collections.sort(animaux, (a1, a2) -> Double.valueOf(a1.getTaille()).compareTo(a2.getTaille()));
+            System.out.println(afficherAnimaux(animaux));
+        }
+        else if (info.equalsIgnoreCase("D")) {
+            Collections.sort(animaux, (a1, a2) -> Double.valueOf(a2.getTaille()).compareTo(a1.getTaille()));
+            System.out.println(afficherAnimaux(animaux));
+        }
+        else {
+            System.out.println("Erreur");
+        }
+
+    }
+
+    public void trierAnimauxParPoids(ArrayList<Animal> animaux, String info) {
+        if (info.equalsIgnoreCase("C")) {
+            Collections.sort(animaux, (a1, a2) -> Double.valueOf(a1.getPoids()).compareTo(a2.getPoids()));
+            System.out.println(afficherAnimaux(animaux));
+        }
+        else if (info.equalsIgnoreCase("D")) {
+            Collections.sort(animaux, (a1, a2) -> Double.valueOf(a1.getPoids()).compareTo(a2.getPoids()));
+            System.out.println(afficherAnimaux(animaux));
+        }
+        else {
+            System.out.println("Erreur");
+        }
     }
 }

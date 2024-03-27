@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner; 
 
-public class Application {
-
+public class AppExo2 {
+    
     public static void main(String[] args) throws Exception {
 
         Scanner sc = new Scanner(System.in);
@@ -12,25 +12,11 @@ public class Application {
 
         ArrayList<Animal> ListeAnimaux = new ArrayList<Animal>();
 
-        Elephant elephant1 = new Elephant("DJUMBO", 1995, 1500, 2.50, SexeAnimal.MASCULIN, Continent.ASIE);
-        Elephant elephant2 = new Elephant("Anna", 2011, 798, 1.75, SexeAnimal.FEMININ, Continent.AFRIQUE);
-        ListeAnimaux.add(elephant1);
-        ListeAnimaux.add(elephant2);
+        Humain humain1 = new Humain("Jack", 2003, 75, 1.80, SexeAnimal.MASCULIN, Continent.AMERIQUE);
+        Humain humain2 = new Humain("Ying", 2020, 40, 1.30, SexeAnimal.FEMININ, Continent.ASIE);
 
-        Girafe girafe1 = new Girafe("Sophie", 2003, 670, 4.15, SexeAnimal.FEMININ);
-        Girafe girafe2 = new Girafe("Daniel", 2022, 341, 1.75, SexeAnimal.MASCULIN);
-        ListeAnimaux.add(girafe1);
-        ListeAnimaux.add(girafe2);
-
-        Serpent serpent1 = new Serpent("Sonny", 2022, 1.1, 2, SexeAnimal.FEMININ, EspeceSerpent.A_SONNETTE);
-        Serpent serpent2 = new Serpent("Roger", 2023, 2.5, 3.5, SexeAnimal.MASCULIN, EspeceSerpent.BOA);
-        ListeAnimaux.add(serpent1);
-        ListeAnimaux.add(serpent2);
-
-        Ours ours1 = new Ours("Teddy", 2018, 767, 1.5, SexeAnimal.FEMININ, EspeceOurs.POLAIRE);
-        Ours ours2 = new Ours("Elmer", 2020, 655, 1.75, SexeAnimal.MASCULIN, EspeceOurs.BRUN);
-        ListeAnimaux.add(ours1);
-        ListeAnimaux.add(ours2);
+        ListeAnimaux.add(humain1);
+        ListeAnimaux.add(humain2);
 
         Zoo zoo = new Zoo();
         
@@ -130,5 +116,4 @@ public class Application {
             }
         } while (menu != 0);
     }
-    
 }
