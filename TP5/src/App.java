@@ -34,7 +34,7 @@ public class App {
 
         for (ICarnivore c : ListeCarnivore) {
             System.out.println(c);
-            System.out.println(c.getNom() + " mange " + c.proiePreferees() + " en quantité " + c.qtteViandeSemaine() + "kg par semaine." + " " + c.tue());
+            System.out.println(c.getNom() + " mange " + c.proiePreferees() + " en quantité " + c.qtteViandeSemaine() + " kg par semaine." + " " + c.tue());
         }
 
         for (IOmnivore o : ListeOmnivore) {
