@@ -86,5 +86,40 @@ public class Zoo {
         return resultat.toString();
     }
 
+    public boolean supprimerAnimal(ArrayList<Animal> animaux, String nom) {
+        boolean trouve = false;
+        int index = -1;
 
+        for(Animal a : animaux){
+            index++;
+            if  (a.getNom().equalsIgnoreCase(nom)) {
+                animaux.remove(index);
+                System.out.println(afficherAnimaux(animaux));
+                trouve = true;
+            }
+        }
+
+        if (!trouve) {
+            System.out.println(nom + " n'existe pas");
+        }
+       
+        return trouve;
+    }
+
+    public String tueriCarnivore(ArrayList<Animal> animaux) {
+        StringBuilder resultat = new StringBuilder();
+
+        resultat.append("Les carnivores du zoo tuent :\n");
+
+        for(Animal a : animaux){
+            if (a instanceof ICarnivore) {
+                resultat.append(a.getNom())
+                    .append(" : ")
+                    .append(((ICarnivore) a).proiePreferees())
+                    .append("\n");
+            }
+        }
+
+        return resultat.toString();
+    }
 }

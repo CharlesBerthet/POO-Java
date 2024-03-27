@@ -7,6 +7,7 @@ public class Application {
 
         Scanner sc = new Scanner(System.in);
         int menu = -1;
+        String animal;
 
         ArrayList<Animal> ListeAnimaux = new ArrayList<Animal>();
 
@@ -70,11 +71,25 @@ public class Application {
                     System.out.println("REPAS");
                     System.out.println("-----------");
                     System.out.println("Quels animal ?");
-                    String animal = sc.next();
+                    animal = sc.next();
                     System.out.println(zoo.rechercherAnimal(ListeAnimaux, animal));
+                    break;
 
                 case 4:
+                    System.out.println("-----------");
+                    System.out.println("TUERIE DE CARNIVORE");
+                    System.out.println("-----------");
+                    System.out.println(zoo.tueriCarnivore(ListeAnimaux));
+                    break;
 
+                case 5:
+                    System.out.println("-----------");
+                    System.out.println("SUPPRESSION");
+                    System.out.println("-----------");
+                    System.out.println("Quels animal ?");
+                    animal = sc.next();
+                    System.out.println(zoo.supprimerAnimal(ListeAnimaux, animal));
+                    break;
             }
         } while (menu != 0);
     }
