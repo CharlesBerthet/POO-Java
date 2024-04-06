@@ -7,7 +7,7 @@ public class Girafe extends Animal implements IHerbivore{
         public static final String TYPE = "Girafe";
 
     
-        Girafe(String nom, int anneeNaissance, double poids, double taille, SexeAnimal sexeAnimal){
+        public Girafe(String nom, int anneeNaissance, double poids, double taille, SexeAnimal sexeAnimal){
             super(nom, anneeNaissance, poids, taille, sexeAnimal);
         }
     

@@ -15,7 +15,7 @@ public class Elephant extends Animal implements IHerbivore{
     }
 
     
-    Elephant(String nom, int anneeNaissance, double poids, double taille, SexeAnimal sexeAnimal, Continent origine){
+    public Elephant(String nom, int anneeNaissance, double poids, double taille, SexeAnimal sexeAnimal, Continent origine){
         super(nom, anneeNaissance, poids, taille, sexeAnimal);
         this.setOrigine(origine);
     }

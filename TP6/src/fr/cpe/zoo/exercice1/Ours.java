@@ -17,7 +17,7 @@ public class Ours extends Animal implements IOmnivore {
         this.espece = espece;
     }
 
-    Ours(String nom, int anneeNaissance, double poids, double taille, SexeAnimal sexeAnimal, EspeceOurs espece) {
+    public Ours(String nom, int anneeNaissance, double poids, double taille, SexeAnimal sexeAnimal, EspeceOurs espece) {
         super(nom, anneeNaissance, poids, taille, sexeAnimal);
         this.setEspece(espece);
     }
