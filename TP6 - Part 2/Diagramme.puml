@@ -1,0 +1,6 @@
+@startuml Comptabilité CPE
+
+class Enseignant {
+}
+
+@enduml
