@@ -62,7 +62,7 @@ public class CPE {
             return result.toString();
         }
 
-        public double coutTotalEnseignants(ArrayList<Enseignant> enseignants, String enseignantPermanent) {
+        public double coutTotal(ArrayList<Enseignant> enseignants) {
             double total = 0;
             for (Enseignant enseignant : enseignants) {
                 if (enseignant instanceof EnseignantPermanent) {
@@ -72,7 +72,7 @@ public class CPE {
                     total += ((Vacataire) enseignant).getTotal();
                 }
                 else if (enseignant instanceof Doctorant) {
-                total += ((Doctorant) enseignant).getTotal();
+                    total += ((Doctorant) enseignant).getTotal();
                 }
             }
             return total;

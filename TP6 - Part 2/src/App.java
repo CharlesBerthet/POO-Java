@@ -1,23 +1,20 @@
 import fr.cpe.CPE;
 import fr.cpe.Exeptions;
 import fr.cpe.enseignant.*;
-import fr.cpe.salaire.*;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-        int menu = -1;
+        int menu;
         String info;
 
         CPE cpe = new CPE();
 
-        ArrayList<Enseignant> ListeEnseignant = new ArrayList<Enseignant>();
+        ArrayList<Enseignant> ListeEnseignant = new ArrayList<>();
 
-        EnseignantPermanent e1 = new EnseignantPermanent("DUPONT", "Jean", SpecialitesEnseignement.Informatique, 300);
 
         ListeEnseignant.add(new EnseignantPermanent("DUPONT", "Jean", SpecialitesEnseignement.Informatique, 300));
         ListeEnseignant.add(new Vacataire("DURAND", "Pierre", SpecialitesEnseignement.Chimie, 20));
@@ -87,19 +84,19 @@ public class App {
                                     System.out.println("===========");
                                     System.out.println("Cout total enseignants permanents");
                                     System.out.println("===========");
-                                    System.out.println("Total de :" + cpe.coutTotalEnseignants(ListeEnseignant, "EnseignantPermanent"));
+                                    System.out.println("Total de :" + cpe.coutTotalTypeEnseignant(ListeEnseignant, "EnseignantPermanent"));
                                     break;
                                 case "2":
                                     System.out.println("===========");
                                     System.out.println("Cout total vacataires");
                                     System.out.println("===========");
-                                    System.out.println("Total de :" + cpe.coutTotalEnseignants(ListeEnseignant, "Vacataire"));
+                                    System.out.println("Total de :" + cpe.coutTotalTypeEnseignant(ListeEnseignant, "Vacataire"));
                                     break;
                                 case "3":
                                     System.out.println("===========");
                                     System.out.println("Cout total doctorants");
                                     System.out.println("===========");
-                                    System.out.println("Total de :" + cpe.coutTotalEnseignants(ListeEnseignant, "Doctorant"));
+                                    System.out.println("Total de :" + cpe.coutTotalTypeEnseignant(ListeEnseignant, "Doctorant"));
                                     break;
                             }
                         } catch (Exception e) {
@@ -144,7 +141,7 @@ public class App {
                         System.out.println("===========");
                         System.out.println("Cout total enseignants");
                         System.out.println("===========");
-                        System.out.println("Total de :");
+                        System.out.println("Total de :" + cpe.coutTotal(ListeEnseignant));
                 }
 
             } while (menu != 0);
