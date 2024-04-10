@@ -13,6 +13,7 @@ public class EnseignantPermanent extends Enseignant implements ISalaire {
         super(nom, prenom, specialite, nbrHeures);
     }
 
+
     @Override
     public double salaire() {
         if (getNbrHeures() <= NBR_HEURES) {
