@@ -37,11 +37,39 @@ interface ISalaire {
     + getTotal() : double
 }
 
-Enum SpecialitesEnseignement {
+enum SpecialitesEnseignement {
     Informatique
     Chimie
     Electronique
     Genie_des_procedes
+}
+
+class Etudiant {
+    - Nom : String
+    - Prénom : String
+    - Formation : Formation
+    - nbrHeures : int
+
+    + getNom() : String
+    + getPrenom() : String
+    + getFormation() : Formation
+    + getSpecialite() : SpecialitesEnseignement
+    + getNbrHeures() : int
+    + setNom(nom : String) : void
+    + setPrenom(prenom : String) : void
+    + setFormation(formation : Formation) : void
+    + setSpecialite(specialite : SpecialitesEnseignement) : void
+    + setNbrHeures(nbrHeures : int) : void
+
+}
+
+enum Formation {
+    ICS
+    IRC
+    ETI
+    PSM
+    CGP
+    GPI
 }
 
 @enduml

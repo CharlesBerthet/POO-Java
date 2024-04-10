@@ -4,6 +4,7 @@ import fr.cpe.enseignant.Doctorant;
 import fr.cpe.enseignant.Enseignant;
 import fr.cpe.enseignant.EnseignantPermanent;
 import fr.cpe.enseignant.Vacataire;
+import fr.cpe.etudiant.Etudiant;
 
 import java.util.ArrayList;
 
@@ -62,7 +63,7 @@ public class CPE {
             return result.toString();
         }
 
-        public double coutTotal(ArrayList<Enseignant> enseignants) {
+        public double coutTotalEnseignant(ArrayList<Enseignant> enseignants) {
             double total = 0;
             for (Enseignant enseignant : enseignants) {
                 if (enseignant instanceof EnseignantPermanent) {
@@ -112,5 +113,26 @@ public class CPE {
                 }
             }
             return total;
+        }
+
+        public String afficherEtudiant(ArrayList<Etudiant> etudiants) {
+            StringBuilder result = new StringBuilder();
+
+            for (Etudiant etudiant : etudiants) {
+                result.append(etudiant.toString());
+            }
+            return result.toString();
+        }
+
+        public double coutTotalEtudiant(ArrayList<Etudiant> etudiants) {
+            double total = 0;
+            for (Etudiant etudiant : etudiants) {
+                total += etudiant.coutTotal();
+            }
+            return total;
+        }
+
+        public double coutTotalCPE(ArrayList<Enseignant> enseignants, ArrayList<Etudiant> etudiants) {
+            return coutTotalEnseignant(enseignants) + coutTotalEtudiant(etudiants);
         }
 }
