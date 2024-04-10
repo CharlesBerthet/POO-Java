@@ -7,6 +7,7 @@ public abstract class Enseignant {
     private SpecialitesEnseignement specialite;
     private int nbrHeures;
 
+
     public String getNom() {
         return nom;
     }
