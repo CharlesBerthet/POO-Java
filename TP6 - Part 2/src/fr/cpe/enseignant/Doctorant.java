@@ -13,6 +13,13 @@ public class Doctorant extends Enseignant implements ISalaire {
 
 
     @Override
+    public String toString()
+    {
+        return super.toString() + " - Doctorant";
+    }
+
+
+    @Override
     public double salaire() {
         if (getNbrHeures() <= NBR_HEURES) {
             return getNbrHeures() * SALAIRE_BRUT;

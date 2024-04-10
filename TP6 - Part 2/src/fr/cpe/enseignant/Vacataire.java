@@ -13,6 +13,13 @@ public class Vacataire extends Enseignant implements ISalaire {
 
 
     @Override
+    public String toString()
+    {
+        return super.toString() + " - Vacataire";
+    }
+
+
+    @Override
     public double salaire() {
         return getNbrHeures() * SALAIRE_BRUT;
     }

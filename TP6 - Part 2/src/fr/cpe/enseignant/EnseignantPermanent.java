@@ -15,11 +15,18 @@ public class EnseignantPermanent extends Enseignant implements ISalaire {
 
 
     @Override
+    public String toString()
+    {
+        return super.toString() + " - Permanent";
+    }
+
+
+    @Override
     public double salaire() {
         if (getNbrHeures() <= NBR_HEURES) {
-            return getNbrHeures() * SALAIRE_BRUT;
+            return 12 * SALAIRE_BRUT;
         }
-        return NBR_HEURES * SALAIRE_BRUT + (getNbrHeures() - NBR_HEURES) * HEURE_COMP;
+        return 12 * SALAIRE_BRUT + (getNbrHeures() - NBR_HEURES) * HEURE_COMP;
     }
 
     @Override
