@@ -1,6 +1,27 @@
 @startuml Comptabilité CPE
 
-class Enseignant {
+abstract class Enseignant {
+
+}
+
+class EnseignantPermanent extends Enseignant {
+
+}
+
+class Vacataire extends Enseignant {
+
+}
+
+class Doctorant extends Enseignant {
+
+}
+
+enum TypeEnseignant {
+
+}
+
+class ChargePatronale {
+
 }
 
 @enduml
