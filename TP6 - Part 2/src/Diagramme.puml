@@ -1,0 +1,47 @@
+@startuml Comptabilité CPE
+
+abstract class Enseignant {
+     - Nom : String
+     - Prénom : String
+     - nbrHeures : int
+
+     + getNom() : String
+     + getPrenom() : String
+     + getNbrHeures() : int
+     + getSpecialite() : SpecialitesEnseignement
+     + setNom(nom : String) : void
+     + setPrenom(prenom : String) : void
+     + setNbrHeures(nbrHeures : int) : void
+     + setSpecialite(specialite : SpecialitesEnseignement) : void
+}
+
+class EnseignantPermanent extends Enseignant implements ISalaire {
+    - NBR_HEURES : static final int
+    - SALAIRE_BRUT : static final int
+    - HEURE_COMP : static final int
+}
+
+class Doctorant extends Enseignant implements ISalaire{
+    - NBR_HEURES : static final int
+    - SALAIRE_BRUT : static final int
+}
+
+class Vacataire extends Enseignant implements ISalaire{
+    - SALAIRE_BRUT : static final int
+    - INFO : static final String
+}
+
+interface ISalaire {
+    + salaire() : double
+    + charge() : double
+    + getTotal() : double
+}
+
+Enum SpecialitesEnseignement {
+    Informatique
+    Chimie
+    Electronique
+    Genie_des_procedes
+}
+
+@enduml

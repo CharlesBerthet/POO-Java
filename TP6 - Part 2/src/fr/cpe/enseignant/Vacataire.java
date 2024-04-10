@@ -15,8 +15,13 @@ public class Vacataire extends Enseignant implements ISalaire {
     @Override
     public String toString()
     {
-        return super.toString() + " - Vacataire";
+        return super.toString() +
+            "\nVacataire : " + INFO +
+            "\nSalaire : " + salaire() +
+            "\nCharge : " + charge() +
+            "\nTotal : " + getTotal();
     }
+
 
 
     @Override

@@ -15,7 +15,12 @@ public class Doctorant extends Enseignant implements ISalaire {
     @Override
     public String toString()
     {
-        return super.toString() + " - Doctorant";
+        return
+            super.toString() +
+            "\nDoctorant" +
+            "\nSalaire : " + salaire() +
+            "\nCharge : " + charge() +
+            "\nTotal : " + getTotal();
     }
 
 

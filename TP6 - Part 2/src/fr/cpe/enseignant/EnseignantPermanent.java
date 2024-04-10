@@ -17,7 +17,12 @@ public class EnseignantPermanent extends Enseignant implements ISalaire {
     @Override
     public String toString()
     {
-        return super.toString() + " - Permanent";
+        return
+            super.toString() +
+            "\nEnseignant Permanent" +
+            "\nSalaire : " + salaire() +
+            "\nCharge : " + charge() +
+            "\nTotal : " + getTotal();
     }
 
 
